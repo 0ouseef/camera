@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/JavaScript" src="script.js"></script>
+  <title>Layout Master</title>
+  <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        .mySlides {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+
+  <nav class="zone green">
+  <ul class="main-nav">
+  <li><a href="">HOME</a></li>
+  <li><a href="">SHOP</a></li>
+  <li><a href="">CONTACT</a></li>
+  <li><a href="">ABOUT</a></li>
+  
+  </ul>
+  
+  </nav>
+ 
+    <div class="w3-content w3-display-container">
+        <img class="mySlides" src="image1.jpg" style="width:100%">
+        <img class="mySlides" src="image2.jpg" style="width:100%">
+        <img class="mySlides" src="image3.jpg" style="width:100%">
+        <img class="mySlides" src="image4.jpg" style="width:100%">
+
+        <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+    </div>
+
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+    </script>
+  
+  
+  <div class="zone blue grid-wrapper">
+  <div class="box zone"><img src="image1.jpg" alt=""></div>
+  <div class="box zone"><img src="image2.jpg" alt="" style="height=400px";></div>
+  <div class="box zone"><img src="image3.jpg" alt=""></div>
+  <div class="box zone"><img src="image4.jpg" alt=""></div>
+  <div class="box zone"><img src="image5.jpg" alt=""></div>
+  <div class="box zone"><img src="image6.jpg" alt=""></div>
+  </div>
+  <footer class="zone yellow">Footer</footer>
+  <
+</body>
+
+</html>
